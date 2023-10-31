@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
-import { Page1 } from "./pages/Page1/Page1";
-import { Page2 } from "./pages/Page2/Page2";
+import { Example1 } from "./pages/Example1/Example1";
+import { Example2 } from "./pages/Example2/Example2";
+import { Example3 } from "./pages/Example3/Example3";
 
 interface IRoute {
   title: string;
@@ -9,15 +10,20 @@ interface IRoute {
 }
 
 export const routesConfig: Record<string, IRoute> = {
-  ["/page1"]: {
-    title: "Страница1",
-    description: "Описание для страницы 1",
-    element: <Page1 />,
+  ["/example1"]: {
+    title: "useState",
+    description: "Простейший пример использования хука useState.",
+    element: <Example1 />,
   },
-  ["/page2"]: {
-    title: "Страница2",
-    description: "Описание для страницы 2",
-    element: <Page2 />,
+  ["/example2"]: {
+    title: "Классическая ошибка",
+    description: "Почему не получится инициализировать состояние без useState.",
+    element: <Example2 />,
+  },
+  ["/example3"]: {
+    title: "Батчинг",
+    description: "Батчинг.",
+    element: <Example3 />,
   },
 };
 
