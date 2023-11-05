@@ -27,6 +27,3 @@ export const Example2 = () => {
     </div>
   );
 };
-
-
-

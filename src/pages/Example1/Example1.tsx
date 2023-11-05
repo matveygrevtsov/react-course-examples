@@ -27,7 +27,3 @@ export const Example1: FC<IProps> = ({ backgroundColor }) => {
     </div>
   );
 };
-
-
-
-
