@@ -8,25 +8,44 @@ interface IRoute {
   title: string;
   description?: string;
   element: ReactElement;
+  image?: {
+    name: string; // Название картинки в папке "public/examplesImages".
+    maxWidth?: number;
+  };
 }
 
 export const routesConfig: Record<string, IRoute> = {
   ["/example1"]: {
     title: "useState: базовый пример",
     element: <Example1 />,
+    image: {
+      name: "fcBaseExample.png",
+      maxWidth: 700,
+    },
   },
   ["/example2"]: {
-    title: "Стейт без useState",
-    description: "Почему не получится инициализировать состояние без useState",
+    title: "Возможно ли реализовать стейт без useState ?",
     element: <Example2 />,
+    image: {
+      name: "stateWithoutUseState.png",
+      maxWidth: 700,
+    },
   },
   ["/example3"]: {
     title: "Батчинг",
     element: <Example3 />,
+    image: {
+      name: "batching.png",
+      maxWidth: 700,
+    },
   },
   ["/example4"]: {
     title: "setState асинхронный ?",
     element: <Example4 />,
+    image: {
+      name: "asyncSetState.png",
+      maxWidth: 700,
+    },
   },
 };
 
