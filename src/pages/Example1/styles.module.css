@@ -5,10 +5,6 @@
   flex-direction: column;
 }
 
-.button {
-  min-width: 50px;
-}
-
 .image {
   width: calc(100% - 1rem);
   max-width: 700px;

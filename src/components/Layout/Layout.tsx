@@ -11,17 +11,16 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
     <div className={s.root}>
       <Navigation className={s.navigation} />
       <div className={s.container}>
-        <h2 className={s.title}>{description || title}</h2>
-        <div className={s.content}>
-          {children}
-          {image && (
-            <img
-              className={s.image}
-              src={`${process.env.PUBLIC_URL}/examplesImages/${image.name}`}
-              style={{ maxWidth: `${image.maxWidth}px` }}
-            />
-          )}
-        </div>
+        <h2 className={s.title}>{title}</h2>
+        {description !== undefined && <h3>{description}</h3>}
+        {children}
+        {image && (
+          <img
+            className={s.image}
+            src={`${process.env.PUBLIC_URL}/examplesImages/${image.name}`}
+            style={{ maxWidth: `${image.maxWidth}px` }}
+          />
+        )}
       </div>
     </div>
   );

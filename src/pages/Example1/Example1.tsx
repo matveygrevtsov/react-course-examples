@@ -17,12 +17,8 @@ export const Example1: FC<IProps> = ({ backgroundColor }) => {
     <div className={s.root} style={{ backgroundColor }}>
       <div>{state}</div>
       <div>
-        <button className={s.button} onClick={handleClickMinus}>
-          -
-        </button>
-        <button className={s.button} onClick={handleClickPlus}>
-          +
-        </button>
+        <button onClick={handleClickMinus}>-</button>
+        <button onClick={handleClickPlus}>+</button>
       </div>
     </div>
   );

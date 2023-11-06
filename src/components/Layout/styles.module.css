@@ -15,21 +15,19 @@
   width: 100%;
   overflow: auto;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > *:not(:first-child) {
+  margin-top: 1rem;
 }
 
 .title {
   text-align: center;
 }
 
-.content {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .image {
-  margin-top: 1rem;
   width: 100%;
 }
