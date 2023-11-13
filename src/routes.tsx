@@ -4,6 +4,8 @@ import { Example1 } from "./pages/Example1/Example1";
 import { Example2 } from "./pages/Example2/Example2";
 import { Example3 } from "./pages/Example3/Example3";
 import { Example4 } from "./pages/Example4/Example4";
+import { Example5 } from "./pages/Example5/Example5";
+import { Example6 } from "./pages/Example6/Example6";
 import { Example7 } from "./pages/Example7/Example7";
 import { Example8 } from "./pages/Example8/Example8";
 import { Example9 } from "./pages/Example9/Example9";
@@ -70,6 +72,22 @@ export const routesConfig: Record<string, IRoute> = {
     image: {
       name: "asyncSetState.png",
       maxWidth: 700,
+    },
+  },
+  ["/example5"]: {
+    title: "useState: можно ли менять начальное состояние через пропсы ?",
+    element: <Example5 />,
+    image: {
+      name: "useStateInitialStateFromProps.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example6"]: {
+    title: "useState: реализация простейшего слайдера",
+    element: <Example6 />,
+    image: {
+      name: "useStateSlider.png",
+      maxWidth: 600,
     },
   },
   ["/example7"]: {
