@@ -4,6 +4,12 @@ import { Example1 } from "./pages/Example1/Example1";
 import { Example2 } from "./pages/Example2/Example2";
 import { Example3 } from "./pages/Example3/Example3";
 import { Example4 } from "./pages/Example4/Example4";
+import { Example7 } from "./pages/Example7/Example7";
+import { Example8 } from "./pages/Example8/Example8";
+import { Example9 } from "./pages/Example9/Example9";
+import { Example10 } from "./pages/Example10/Example10";
+import { Example11 } from "./pages/Example11/Example11";
+import { Example12 } from "./pages/Example12/Example12";
 
 interface IRoute {
   title: ReactElement | string;
@@ -64,6 +70,75 @@ export const routesConfig: Record<string, IRoute> = {
     image: {
       name: "asyncSetState.png",
       maxWidth: 700,
+    },
+  },
+  ["/example7"]: {
+    title: "useEffect: базовый пример",
+    element: <Example7 />,
+    image: {
+      name: "useEffectBaseExample.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example8"]: {
+    title: "useEffect: массив зависимостей",
+    description:
+      "Будет ли выведено сообщение в консоль после нажатия на кнопку ?",
+    element: <Example8 />,
+    image: {
+      name: "useEffectDepsArray.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example9"]: {
+    title: "useEffect: unmounting-функция",
+    description: "Что будет выведено в консоль после нажатия на кнопку ?",
+    element: <Example9 />,
+    image: {
+      name: "useEffectUnmountingFunction1.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example10"]: {
+    title: "useEffect: первичный рендер",
+    description: (
+      <QuestionList
+        title="Что будет выведено в консоль, когда мы нажмём на кнопку:"
+        questions={[`"показать" ?`, `"спрятать" ?`]}
+      />
+    ),
+    element: <Example10 />,
+    image: {
+      name: "useEffectChildAndParentComponentsMountOrder.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example11"]: {
+    title: "useEffect: объекты в массиве зависимостей",
+    element: <Example11 />,
+    description: (
+      <QuestionList
+        title="Что будет выведено в консоль, когда мы нажмём на:"
+        questions={[`"Кнопку1" ?`, `"Кнопку2" ?`]}
+      />
+    ),
+    image: {
+      name: "useEffectObjectInDepsArray.png",
+      maxWidth: 500,
+    },
+  },
+  ["/example12"]: {
+    title: "useEffect: нужен ли ререндер, чтобы сработал useEffect ?",
+    element: <Example12 />,
+    description: (
+      <QuestionList
+        title="Что будет выведено в консоль, когда мы нажмём на:"
+        questions={[`"Кнопку1" ?`, `"Кнопку2" ?`]}
+      />
+    ),
+    image: {
+      name: "useEffectRerender.png",
+      maxWidth: 500,
     },
   },
 };
