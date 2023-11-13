@@ -1,0 +1,10 @@
+.parent {
+  padding: 1rem;
+  border: 3px solid rgb(64, 120, 242);
+  text-align: center;
+}
+
+.child {
+  padding: 1rem;
+  border: 3px solid rgb(184, 84, 80);
+}
