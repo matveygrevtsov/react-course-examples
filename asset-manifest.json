@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-course-examples/static/css/main.578fc4e1.css",
-    "main.js": "/react-course-examples/static/js/main.0d705ace.js",
+    "main.css": "/react-course-examples/static/css/main.4a4b1e1a.css",
+    "main.js": "/react-course-examples/static/js/main.14eccdb5.js",
     "static/js/787.c8a8309b.chunk.js": "/react-course-examples/static/js/787.c8a8309b.chunk.js",
     "index.html": "/react-course-examples/index.html",
-    "main.578fc4e1.css.map": "/react-course-examples/static/css/main.578fc4e1.css.map",
-    "main.0d705ace.js.map": "/react-course-examples/static/js/main.0d705ace.js.map",
+    "main.4a4b1e1a.css.map": "/react-course-examples/static/css/main.4a4b1e1a.css.map",
+    "main.14eccdb5.js.map": "/react-course-examples/static/js/main.14eccdb5.js.map",
     "787.c8a8309b.chunk.js.map": "/react-course-examples/static/js/787.c8a8309b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.578fc4e1.css",
-    "static/js/main.0d705ace.js"
+    "static/css/main.4a4b1e1a.css",
+    "static/js/main.14eccdb5.js"
   ]
 }
