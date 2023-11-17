@@ -12,11 +12,15 @@ import { Example9 } from "./pages/Example9/Example9";
 import { Example10 } from "./pages/Example10/Example10";
 import { Example11 } from "./pages/Example11/Example11";
 import { Example12 } from "./pages/Example12/Example12";
+import { Example13 } from "./pages/Example13/Example13";
+import { Example14 } from "./pages/Example14/Example14";
+import { Example15 } from "./pages/Example15/Example15";
+import { Example16 } from "./pages/Example16/Example16";
 
 interface IRoute {
   title: ReactElement | string;
   description?: ReactElement | string;
-  element: ReactElement;
+  element?: ReactElement;
   image?: {
     name: string; // Название картинки в папке "public/examplesImages".
     maxWidth?: number;
@@ -157,6 +161,40 @@ export const routesConfig: Record<string, IRoute> = {
     image: {
       name: "useEffectRerender.png",
       maxWidth: 500,
+    },
+  },
+  ["/example13"]: {
+    title: "useMemo: базовый пример",
+    element: <Example13 />,
+    description:
+      "После нажатия на левую кнопку, счётчик обновляется лишь спустя секунду, потому что длинный массив при каждом перерендере вычисляется и сортируется заново, что полностью блокирует процесс рендеринга UI. После нажатия на правую кнопку, такой проблемы не наблюдается, потому что соответствующий компонент использует хук useMemo.",
+    image: {
+      name: "useMemoBaseExample.png",
+      maxWidth: 1200,
+    },
+  },
+  ["/example14"]: {
+    title: "useMemo: кастомная реализация",
+    element: <Example14 />,
+    image: {
+      name: "useMemoCustom.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example15"]: {
+    title: "useCallback: базовый пример",
+    element: <Example15 />,
+    image: {
+      name: "useCallbackBaseExample.png",
+      maxWidth: 900,
+    },
+  },
+  ["/example16"]: {
+    title: "useCallback: кастомная реализация",
+    element: <Example16 />,
+    image: {
+      name: "useCallbackCustomRealization.png",
+      maxWidth: 600,
     },
   },
 };
