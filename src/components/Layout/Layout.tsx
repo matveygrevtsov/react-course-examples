@@ -18,7 +18,9 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
           <img
             className={s.image}
             src={`${process.env.PUBLIC_URL}/examplesImages/${image.name}`}
-            style={{ maxWidth: `${image.maxWidth}px` }}
+            style={
+              image.maxWidth ? { maxWidth: `${image.maxWidth}px` } : undefined
+            }
           />
         )}
       </div>
