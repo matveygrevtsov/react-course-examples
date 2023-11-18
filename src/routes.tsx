@@ -16,6 +16,7 @@ import { Example13 } from "./pages/Example13/Example13";
 import { Example14 } from "./pages/Example14/Example14";
 import { Example15 } from "./pages/Example15/Example15";
 import { Example16 } from "./pages/Example16/Example16";
+import { Example17 } from "./pages/Example17/Example17";
 
 interface IRoute {
   title: ReactElement | string;
@@ -195,6 +196,21 @@ export const routesConfig: Record<string, IRoute> = {
     image: {
       name: "useCallbackCustomRealization.png",
       maxWidth: 600,
+    },
+  },
+  ["/example17"]: {
+    title: "useReducer: базовый пример",
+    element: <Example17 />,
+    image: {
+      name: "useReducerBaseExample.png",
+      maxWidth: 1100,
+    },
+  },
+  ["/example18"]: {
+    title: "useReducer: кастомная реализация",
+    image: {
+      name: "useReducerCustomRealization.png",
+      maxWidth: 1000,
     },
   },
 };
