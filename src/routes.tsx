@@ -17,6 +17,8 @@ import { Example14 } from "./pages/Example14/Example14";
 import { Example15 } from "./pages/Example15/Example15";
 import { Example16 } from "./pages/Example16/Example16";
 import { Example17 } from "./pages/Example17/Example17";
+import { Example18 } from "./pages/Example18/Example18";
+import { Example20 } from "./pages/Example20/Example20";
 
 interface IRoute {
   title: ReactElement | string;
@@ -199,18 +201,36 @@ export const routesConfig: Record<string, IRoute> = {
     },
   },
   ["/example17"]: {
-    title: "useReducer: базовый пример",
+    title:
+      "useCallback: является ли мемоизированной функция, которая вычислена при помощи мемоизированной функции, но при этом не обёрнута в useCallback ?",
+    description: "Что будет выведено в консоль после нажатия на кнопку ?",
     element: <Example17 />,
+    image: {
+      name: "useCallbackFuncToProps.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example18"]: {
+    title: "useReducer: базовый пример",
+    element: <Example18 />,
     image: {
       name: "useReducerBaseExample.png",
       maxWidth: 1100,
     },
   },
-  ["/example18"]: {
+  ["/example19"]: {
     title: "useReducer: кастомная реализация",
     image: {
       name: "useReducerCustomRealization.png",
       maxWidth: 1000,
+    },
+  },
+  ["/example20"]: {
+    title: "useRef: базовый пример",
+    element: <Example20 />,
+    image: {
+      name: "useRefBaseExample.png",
+      maxWidth: 700,
     },
   },
 };

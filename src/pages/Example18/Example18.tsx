@@ -1,17 +1,32 @@
-import { useState } from "react";
+import { useReducer } from "react";
+import { EActionType, initialState, reducer } from "./constants";
 
-function useReducer<State, Action>(
-  reducer: (prevState: State, action: Action) => State,
-  initialState: State,
-  initializer?: (initialState: State) => State
-) {
-  const [state, setState] = useState<State>(
-    initializer ? initializer(initialState) : initialState
+export const Example18 = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <>
+      <div>count: {state.count}</div>
+      <div>
+        <button
+          onClick={() =>
+            dispatch({
+              type: EActionType.Decrement,
+            })
+          }
+        >
+          -
+        </button>
+        <button
+          onClick={() =>
+            dispatch({
+              type: EActionType.Increment,
+            })
+          }
+        >
+          +
+        </button>
+      </div>
+    </>
   );
-
-  const dispatch = (action: Action) => {
-    setState((prevState) => reducer(prevState, action));
-  };
-
-  return [state, dispatch];
-}
+};

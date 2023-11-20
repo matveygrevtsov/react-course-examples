@@ -1,32 +1,28 @@
-import { useReducer } from "react";
-import { EActionType, initialState, reducer } from "./constants";
+import { FC, useCallback, useEffect, useState } from "react";
+
+interface IProps {
+  func: () => void;
+}
+
+const ChildComponent: FC<IProps> = ({ func }) => {
+  useEffect(() => console.log(2), [func]);
+
+  return <div />;
+};
 
 export const Example17 = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, setState] = useState<number>(0);
+
+  const func = useCallback(() => console.log(1), []);
 
   return (
     <>
-      <div>count: {state.count}</div>
-      <div>
-        <button
-          onClick={() =>
-            dispatch({
-              type: EActionType.Decrement,
-            })
-          }
-        >
-          -
-        </button>
-        <button
-          onClick={() =>
-            dispatch({
-              type: EActionType.Increment,
-            })
-          }
-        >
-          +
-        </button>
-      </div>
+      <button onClick={() => setState((prevState) => prevState + 1)}>
+        {state}
+      </button>
+      <ChildComponent func={() => func()} />
     </>
   );
 };
+
+
