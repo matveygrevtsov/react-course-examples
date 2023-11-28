@@ -1,4 +1,4 @@
-export const words = [
+const wordsArray = [
   "distinct",
   "exclusive",
   "magenta",
@@ -1000,3 +1000,25 @@ export const words = [
   "consider",
   "tendency",
 ];
+
+export const words = (() => {
+  // const result: string[] = [];
+  // for (let i = 0; i < 10; i++) {
+  //   wordsArray.forEach((word) => {
+  //     result.push(`${word}${i}`);
+  //   });
+  // }
+  // return result;
+  return [
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+  ];
+})();

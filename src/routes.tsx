@@ -27,6 +27,7 @@ import { Example25 } from "./pages/Example25/Example25";
 import { Example26 } from "./pages/Example26/Example26";
 import { Example27 } from "./pages/Example27/Example27";
 import { Example28 } from "./pages/Example28/Example28";
+import { Example29 } from "./pages/Example29/Example29";
 
 interface IRoute {
   title: ReactElement | string;
@@ -309,6 +310,14 @@ export const routesConfig: Record<string, IRoute> = {
     image: {
       name: "useIdCustom.png",
       maxWidth: 600,
+    },
+  },
+  ["/example29"]: {
+    title: "useDeferredValue",
+    element: <Example29 />,
+    image: {
+      name: "useDeferredValueBaseExample.png",
+      maxWidth: 550,
     },
   },
 };
