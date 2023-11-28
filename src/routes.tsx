@@ -19,6 +19,14 @@ import { Example16 } from "./pages/Example16/Example16";
 import { Example17 } from "./pages/Example17/Example17";
 import { Example18 } from "./pages/Example18/Example18";
 import { Example20 } from "./pages/Example20/Example20";
+import { Example21 } from "./pages/Example21/Example21";
+import { Example22 } from "./pages/Example22/Example22";
+import { Example23 } from "./pages/Example23/Example23";
+import { Example24 } from "./pages/Example24/Example24";
+import { Example25 } from "./pages/Example25/Example25";
+import { Example26 } from "./pages/Example26/Example26";
+import { Example27 } from "./pages/Example27/Example27";
+import { Example28 } from "./pages/Example28/Example28";
 
 interface IRoute {
   title: ReactElement | string;
@@ -231,6 +239,76 @@ export const routesConfig: Record<string, IRoute> = {
     image: {
       name: "useRefBaseExample.png",
       maxWidth: 700,
+    },
+  },
+  ["/example21"]: {
+    title: "useRef: передача реф в пропсы",
+    element: <Example21 />,
+    image: {
+      name: "useRefForwardRef.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example22"]: {
+    title: "useRef: передача функции в проп ref",
+    description: (
+      <QuestionList
+        title="Что будет выведено в консоль, когда мы нажмём на:"
+        questions={[`Кнопку "Показать" ?`, `Кнопку "Спрятать" ?`]}
+      />
+    ),
+    element: <Example22 />,
+    image: {
+      name: "useRefFunctionToRefProp.png",
+      maxWidth: 600,
+    },
+  },
+  ["/example23"]: {
+    title: "useRef: кастомная реализация",
+    element: <Example23 />,
+    image: {
+      name: "useRefCustomRealization.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example24"]: {
+    title: "useRef: использование «не по назначению»",
+    element: <Example24 />,
+    image: {
+      name: "useRefSound.png",
+      maxWidth: 600,
+    },
+  },
+  ["/example25"]: {
+    title: "useContext: базовый пример",
+    element: <Example25 />,
+    image: {
+      name: "useContextBaseExample.png",
+      maxWidth: 500,
+    },
+  },
+  ["/example26"]: {
+    title: "useContext: кастомный redux",
+    element: <Example26 />,
+    image: {
+      name: "useContextCustomRedux.png",
+      maxWidth: 1000,
+    },
+  },
+  ["/example27"]: {
+    title: "useId: базовый пример",
+    element: <Example27 />,
+    image: {
+      name: "useIdBaseExample.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example28"]: {
+    title: "useId: кастомная реализация",
+    element: <Example28 />,
+    image: {
+      name: "useIdCustom.png",
+      maxWidth: 600,
     },
   },
 };
