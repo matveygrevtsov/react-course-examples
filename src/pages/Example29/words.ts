@@ -1002,13 +1002,6 @@ const wordsArray = [
 ];
 
 export const words = (() => {
-  // const result: string[] = [];
-  // for (let i = 0; i < 10; i++) {
-  //   wordsArray.forEach((word) => {
-  //     result.push(`${word}${i}`);
-  //   });
-  // }
-  // return result;
   return [
     ...wordsArray,
     ...wordsArray,
