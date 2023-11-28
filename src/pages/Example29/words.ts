@@ -1,4 +1,4 @@
-export const words = [
+const wordsArray = [
   "distinct",
   "exclusive",
   "magenta",
@@ -1000,3 +1000,18 @@ export const words = [
   "consider",
   "tendency",
 ];
+
+export const words = (() => {
+  return [
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+    ...wordsArray,
+  ];
+})();
