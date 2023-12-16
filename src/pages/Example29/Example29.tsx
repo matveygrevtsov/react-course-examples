@@ -1,5 +1,6 @@
 import { ChangeEventHandler, useDeferredValue, useMemo, useState } from "react";
-import { words } from "./words";
+import { WordsList } from "./components/WordsList/WordsList";
+import { words } from "./words"; // Большой массив слов.
 
 // Данная функция считает, сколько символов из первой строки лежат во второй строке.
 const stringsMatchIndex = (string1: string, string2: string): number => {
@@ -22,9 +23,7 @@ const useSortedWords = (searchString: string) => {
 export const Example29 = () => {
   const [searchString, setSearchString] = useState<string>("");
   const deferredSearchString = useDeferredValue(searchString);
-
-  // const sortedWords = useSortedWords(deferredSearchString);
-  const sortedWords = useSortedWords(searchString);
+  const sortedWords = useSortedWords(deferredSearchString);
 
   const handleInputChange: ChangeEventHandler<HTMLInputElement> = ({
     target,
@@ -35,19 +34,7 @@ export const Example29 = () => {
   return (
     <>
       <input value={searchString} onChange={handleInputChange} />
-
-      <ul
-        style={{
-          height: "100px",
-          overflow: "auto",
-          paddingLeft: "2rem",
-          flexShrink: 0,
-        }}
-      >
-        {sortedWords.map((word, index) => (
-          <li key={index}>{word}</li>
-        ))}
-      </ul>
+      <WordsList words={sortedWords} />
     </>
   );
 };

@@ -1,0 +1,8 @@
+.tabs {
+  list-style: none;
+  display: flex;
+}
+
+.activeTab {
+  background-color: red;
+}

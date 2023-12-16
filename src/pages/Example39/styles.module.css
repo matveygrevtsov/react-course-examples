@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  gap: 1rem;
+}
+
+.counter {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border: 1px solid gray;
+}

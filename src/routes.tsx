@@ -28,6 +28,23 @@ import { Example26 } from "./pages/Example26/Example26";
 import { Example27 } from "./pages/Example27/Example27";
 import { Example28 } from "./pages/Example28/Example28";
 import { Example29 } from "./pages/Example29/Example29";
+import { Example31 } from "./pages/Example31/Example31";
+import { Example32 } from "./pages/Example32/Example32";
+import { Example33 } from "./pages/Example33/Example33";
+import { Example34 } from "./pages/Example34/Example34";
+import { Example35 } from "./pages/Example35/Example35";
+import { Example36 } from "./pages/Example36/Example36";
+import { Example37 } from "./pages/Example37/Example37";
+import { Example38 } from "./pages/Example38/Example38";
+import { Example39 } from "./pages/Example39/Example39";
+import { Example40 } from "./pages/Example40/Example40";
+import { Example41 } from "./pages/Example41/Example41";
+import { Example42 } from "./pages/Example42/Example42";
+import { Example43 } from "./pages/Example43/Example43";
+import { Example44 } from "./pages/Example44/Example44";
+import { Example45 } from "./pages/Example45/Example45";
+import { Example46 } from "./pages/Example46/Example46";
+import { Example47 } from "./pages/Example47/Example47";
 
 interface IRoute {
   title: ReactElement | string;
@@ -317,7 +334,154 @@ export const routesConfig: Record<string, IRoute> = {
     element: <Example29 />,
     image: {
       name: "useDeferredValueBaseExample.png",
+      maxWidth: 750,
+    },
+  },
+  ["/example30"]: {
+    title: "useDeferredValue",
+    element: <Example29 />,
+    image: {
+      name: "useDeferredValueBaseExample.png",
+      maxWidth: 750,
+    },
+  },
+  ["/example31"]: {
+    title: "useImperativeHandle: базовый пример",
+    element: <Example31 />,
+    image: {
+      name: "useImperativeHandle.png",
+      maxWidth: 450,
+    },
+  },
+  ["/example32"]: {
+    title: "useImperativeHandle: абстрактный пример практического применения",
+    element: <Example32 />,
+    image: {
+      name: "useImperativeHandleAbstractExample.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example33"]: {
+    title:
+      "useLayoutEffect: анимация, демонстрирующая разницу между useEffect и useLayoutEffect",
+    element: <Example33 />,
+    image: {
+      name: "useLayoutEffect.png",
+      maxWidth: 500,
+    },
+  },
+  ["/example34"]: {
+    title:
+      "useLayoutEffect: генератор случайного числа, демонстрирующий разницу между useEffect и useLayoutEffect",
+    element: <Example34 />,
+    image: {
+      name: "useLayoutEffect2.png",
       maxWidth: 550,
+    },
+  },
+  ["/example35"]: {
+    title: "useTransition: табуляция",
+    element: <Example35 />,
+    image: {
+      name: "useTransition.png",
+      maxWidth: 460,
+    },
+  },
+  ["/example36"]: {
+    title: "useDebugValue",
+    element: <Example36 />,
+    image: {
+      name: "useDebugValue.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example37"]: {
+    title: "useInsertionEffect: базовый пример",
+    description: "Что будет выведено в консоль после нажатия на кнопку ?",
+    element: <Example37 />,
+    image: {
+      name: "useInsertionEffect.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example38"]: {
+    title: "useInsertionEffect: использование setState",
+    element: <Example38 />,
+    image: {
+      name: "useInsertionEffectSetState.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example39"]: {
+    title: "useSyncExternalStore",
+    element: <Example39 />,
+    image: {
+      name: "useExternalStore.png",
+      maxWidth: 1170,
+    },
+  },
+  ["/example40"]: {
+    title: "useClickAway",
+    element: <Example40 />,
+    image: {
+      name: "useClickAway.png",
+      maxWidth: 1000,
+    },
+  },
+  ["/example41"]: {
+    title: "useWindowSize",
+    element: <Example41 />,
+    image: {
+      name: "useWindowSize.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example42"]: {
+    title: "useScroll",
+    element: <Example42 />,
+    image: {
+      name: "useScroll.png",
+      maxWidth: 500,
+    },
+  },
+  ["/example43"]: {
+    title: "useKeyPressEvent",
+    element: <Example43 />,
+    image: {
+      name: "useKeyPressEvent.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example44"]: {
+    title: "useLocalStorage",
+    element: <Example44 />,
+    image: {
+      name: "useLocalStorage.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example45"]: {
+    title: "useSpeech",
+    element: <Example45 />,
+    image: {
+      name: "useSpeech.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example46"]: {
+    title: "useFavicon",
+    element: <Example46 />,
+    image: {
+      name: "useFavicon.png",
+      maxWidth: 700,
+    },
+  },
+  ["/example47"]: {
+    title: "useUpdate",
+    element: <Example47 />,
+    image: {
+      name: "useUpdate.png",
+      maxWidth: 700,
     },
   },
 };
